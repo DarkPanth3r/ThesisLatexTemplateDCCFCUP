@@ -139,6 +139,13 @@
         \chapter*{#1}
         \addcontentsline{toc}{chapter}{#1}}
 
+%% Format the chapter
+%% for now only resets the acronyms expansions
+\usepackage[clearempty]{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{10pt}{\Huge}[\acresetall]
+
+
 \usepackage{fancyhdr}
 \def\afterpreface{%
         \tableofcontents
