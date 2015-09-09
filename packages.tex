@@ -31,6 +31,16 @@
 % for named colors (see 
 % http://en.wikibooks.org/wiki/LaTeX/Colors#The_68_standard_colors_known_to_dvips)
 \definecolor{light-gray}{gray}{0.94}
+\definecolor{gray-cell}{gray}{.80}
+\usepackage{colortbl}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{multirow}
+
+
+% rotating introduces some glitches with acronym. Acronyms used in the sidewaystable were marked as being multiply
+% defined. They were expanded the 1st time on the table. Using \acs solved the issue
+\usepackage{rotating}
 
 % used for code examples and other listings
 \usepackage{listings}
@@ -86,6 +96,8 @@
   }{}
 \makeatother
 
+% This adds the possibility of having lists in paragraphs
+\usepackage{paralist}
 
 % Enhance/improve fonts, kerning and spacing
 \usepackage{microtype}
