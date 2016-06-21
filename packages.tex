@@ -88,12 +88,15 @@
 %  morekeywords={*,...}            % if you want to add more keywords to the set
    escapechar=\#,                   % enable to right latex and be interpreted as such
 }
+\newcommand*\acronymname{Acronyms}
+\newcommand*\acronymbiggest{HTTP}
 
 \makeatletter
   \@ifpackagewith{babel}{portuguese}{%
     \addto\captionsportuguese{\renewcommand*\lstlistlistingname{Lista de Blocos de Código}}%
     \addto\captionsportuguese{\renewcommand*\lstlistingname{Bloco de Código}}%
-  }{}
+    \addto\captionsportuguese{\renewcommand*\acronymname{Acrónimos}}%
+  }{ }
 \makeatother
 
 % This adds the possibility of having lists in paragraphs
@@ -125,6 +128,9 @@
 
 % Acronyms package
 \usepackage{acronym}
+\newcommand*\acronymfile{acros.tex}
+
+
 
 % Enable multicoluns, used in the acronyms appendix
 \usepackage{multicol}

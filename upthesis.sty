@@ -139,6 +139,22 @@
         \chapter*{#1}
         \addcontentsline{toc}{chapter}{#1}}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Acronyms
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\printacronyms{%
+  \prefacesection{\acronymname}
+%  %%%%%%%%%%%%%%%%%%%%%%%%%
+  \begin{multicols}{2}
+  \setlength{\columnseprule}{0.5pt}
+  \makeatletter
+  \columnsep 35\p@
+  \makeatother
+  \begin{acronym}[\acronymbiggest] % the biggest acronym
+    \input{\acronymfile}
+  \end{acronym}
+  \end{multicols}
+}
 %% Format the chapter
 %% for now only resets the acronyms expansions
 \usepackage[clearempty]{titlesec}
@@ -156,6 +172,9 @@
            \addcontentsline{toc}{chapter}{\listfigurename}
            \lstlistoflistings
            \addcontentsline{toc}{chapter}{\lstlistlistingname}
+
+%           %%%%%%%%%%%%%%%%%%%%%%%%%
+           \printacronyms
           \cleardoublepage
         \pagenumbering{arabic}
         %\pagestyle{headings}

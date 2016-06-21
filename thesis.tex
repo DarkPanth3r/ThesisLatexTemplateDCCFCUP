@@ -107,26 +107,5 @@ pdfpagelabels=false
 %\nocite{*}  % Include all entries in references.bib, not just the ones cited.
 \bibliography{refs} %changed the env to make it a numbered chapter
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  Acronyms
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\twocolumn
-
-%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Acrónimos}
-%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{multicols}{2}
-\setlength{\columnseprule}{0.5pt}
-\makeatletter
-\@mkboth{\MakeUppercase Acrónimos}{\MakeUppercase Acrónimos}
-\columnsep 35\p@
-\makeatother
-\begin{acronym}[HTTP] % o maior acrónimo
-\input{acros.tex}
-\end{acronym}
-\end{multicols}
-
-
 %% bye
 \end{document}
