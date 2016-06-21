@@ -9,4 +9,11 @@
 
 ---+ Add Functionality
    * easy removal of listings not needed
+   * add the correct cover
 
+---+ CleanUp
+   * remove unneeded code from upthesis.sty
+   * merge packages and upthesis.sty ??
+
+---+ Add content
+   * Suggestions from Ines
