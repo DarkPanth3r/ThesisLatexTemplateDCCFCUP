@@ -1,0 +1,12 @@
+---+ Explanations
+   * pictures htb
+   * figures should be in pdf
+
+---+ Add examples
+   * tables
+      * with symbols and colours
+      * sidewaystable
+
+---+ Add Functionality
+   * easy removal of listings not needed
+
