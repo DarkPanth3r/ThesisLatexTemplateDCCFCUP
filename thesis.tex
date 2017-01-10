@@ -83,7 +83,7 @@ pdfpagelabels=false
 \dedicationpage{Dedico a \ldots}
 
 % end of thesis preambule
-\afterpreface
+\afterpreface%
 
 %% main tex here
 %% By putting the chapter names here, one can just comment the content in the chapters 
@@ -121,6 +121,8 @@ pdfpagelabels=false
 %\renewcommand{\bibname}{Referências} % o babel portuguese colocar Bibliografia
 \cleardoublepage
 \phantomsection
+\cleardoublepage%
+\phantomsection%
 \addcontentsline{toc}{chapter}{\bibname}
 \bibliographystyle{plainnaturlAuthor} % use plainnaturlAppear to order references by appearance 
 % usually it is by author on thesis, to ease Author lookup
