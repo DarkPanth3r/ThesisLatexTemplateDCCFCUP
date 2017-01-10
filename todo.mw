@@ -1,0 +1,37 @@
+=Explanations=
+* pictures htb
+* figures should be in pdf
+** explain methods
+* pictures should always have explanations. Existence of picture does not exempt of descriptions
+* units (ref cl's http://www.cl.cam.ac.uk/~mgk25/publ-tips/#typography)
+* ~ for references, citations, units, IEEE~802.11, etc.
+* conclusão:
+* Nas conclusões deves referir o problema e o que conseguiste fazer para o resolver. Salientando alguns pontos relevantes da solução (modularidade => capacidade de desenvolvimento; otimização da identificação da rede). Depois é interessante referir o que o trabalho potencia para outros trabalhos (podes referir novamente a parte da modularidade indicando os módulos interessantes a acrescentar). Deves também mencionar o que ainda falta fazer para por exemplo ter um processo completo de wardriving e visualização/estatístcas (não uses a palavra wardriving 
+* clarify the need to differentiate perfectly, what is prior work (design, tools, algorithms) and work developed in the project of the thesis
+* no bib colocar {} entre acrónimos para o bibtex não colocar em minúsculas.
+
+= Add examples=
+* tables
+** with symbols and colours
+** sidewaystable
+
+= Add Functionality =
+* easy removal of listings not needed
+* add the correct cover
+** see input from Rui
+* meses em Português (no sty)
+
+=CleanUp =
+* remove unneeded code from upthesis.sty
+* merge packages and upthesis.sty ??
+* tech report in bib does not show anything
+
+=Add content =
+* Suggestions from Ines
+* reference the authors names and not the numbered ref
+* statements should be backed up by references
+* JabRef http://www.jabref.org/ to easily know which fields are needed
+* avoid web links as much as possible
+* Texto deve ser formal e direto sem exageros, opiniões ou apelo a emoções
+
+
