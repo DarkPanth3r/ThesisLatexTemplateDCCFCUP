@@ -137,6 +137,131 @@ Exemplo de uma tabela mais complexa na tabela~\ref{tab:bsnvswsn}.
 }
 \end{table}
 
+Uma tabela de lado exemplificada em~\ref{tab:sensorExample}.
+\begin{sidewaystable}
+   \centering
+   \begin{threeparttable}
+      \caption{Sensor examples}\label{tab:sensorExample}
+      {
+      \footnotesize
+      %\begin{tabularx}{0.99\textheight}{|m{9.5em}|m{7.5em}|>{\columncolor{gray-cell}}m{12em}|m{12em}|c|c|m{5em}|}
+      \begin{tabular}{|>{\centering}m{9.5em}|>{\centering}m{6.5em}|>{\columncolor{gray-cell}\centering}m{14em}|m{15em}|c|c|>{\centering}m{6.5em}|}
+         \hline
+         \rowcolor{gray-cell} 
+          \textbf{Device} &  \textbf{Availability}&  \textbf{Sensed} & \centering \textbf{Technology} & 
+         \textbf {Frequency} & \textbf{Data Rate} \tnote{$\mathbf{\propto}$} &     \textbf{Energy} \tnote{$\mathbf{\Diamond}$}
+         \tabularnewline \hline
+
+         %%%% line
+         \multirow{6}{*}{\vspace{-3em}BioHarness BT} &
+         \multirow{6}{*}{\vspace{-3em}commercial}
+         & \acs{HR} & detection of \emph{QRS} complex in \acs{ECG}  &
+         1~Hz & 8~bps &
+         \multirow{6}{5.5em}{\centering 21~h transmitting}
+         \tabularnewline \cline{3-6}
+
+         %%%% line
+          &
+         & Breathing rate & conductive elastic measurement of thorax excursion & 1~Hz & 7~bps &
+          
+         \tabularnewline \cline{3-6}
+
+         %%%% line
+          &
+         & 3D Accelerometer & variability of a weight reference  & 50~Hz \tnote{$\Join$}& 500~bps \tnote{$\Join$} &
+          
+         \tabularnewline \cline{3-6}
+
+         %%%% line
+          &
+         & \acs{ECG} & potential difference across electrodes in body &  250~Hz &
+         2500~bps &
+          
+         \tabularnewline \cline{3-6}
+
+         %%%% line
+          &
+         & Gyroscope & angular momentum  & 1~Hz & 9~bps&
+          
+          \tabularnewline \cline{3-6}
+
+          &
+         & Skin temperature & thermistor  & 1~Hz & 9~bps&
+          
+         \tabularnewline \hline
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+       %%%% line
+        Actigraph GT3X+~\cite{actiGSpecs} &
+         commercial
+         & 3D Accelerometer & variability of a weight reference  & 30-100~Hz \tnote{$\Join$} &
+         360-1200~bps \tnote{$\Join$} &
+         31 days
+         \tabularnewline \hline
+
+       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+       %%%% line
+        Shimmer Research GSR Sensor &
+         commercial
+         & Galvanic skin response & measure skin conductivity & up to 15.9~Hz &
+         191~bps &
+         60 $\mu$A  
+         \tabularnewline \hline
+       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+       %%%% line
+         \multirow{2}{*}{Nonin Onyx II~\cite{noninOnyxSpecs}} &
+         \multirow{2}{*}{commercial}
+         & $\mathrm{O_2}$ saturation (full waveform) & \multirow{2}{15em}{measure light absorption by blood haemoglobin}  &
+         75~Hz & 1200~bps &
+         \multirow{2}{6.5em}{\centering 2$\times$1.5~V AAA (600 tests)}
+         \tabularnewline \cline{3-3} \cline{5-6}
+
+         %%%% line
+          &
+         & $\mathrm{O_2}$  saturation (display format)  &   &
+         1~Hz & 8~bps &
+         
+         \tabularnewline \hline
+
+         %%%% line
+         Medtronic iPro CGM & commercial
+         & continuous glucose meter & electrochemical detection of glucose through its reaction with glucose oxidase
+         & 0.1~Hz \tnote{$\lhd$} & 1~bps \tnote{$\rhd$}&
+         up to 72~h
+         \tabularnewline \hline
+
+         %%%% line
+         Brain sensor by Nurmikko et al. & in research \tnote{$\ddag$} &  brain activity &  microelectrode arrays detect neuron firing & \multicolumn{2}{c|}{40~k samples/sec$\times$16 channels \tnote{$\aleph$}} &
+        12~mW 
+         \tabularnewline \hline
+
+         %%%% line
+         Molecular biomarkers by Ling et al. & research prototype \tnote{$\star$} &  serum cardiac troponin I, creatinine kinase, myoglobin &  magnetic properties of sensors vary according to presence of biomarker &
+         \multicolumn{3}{c|}{N/A} 
+         \tabularnewline \hline
+
+          %%%% line
+          Electrochemical dopamine sensor by Chan et al.\tnote{$\otimes$} & research  &  dopamine &  Interdigitated micro electrodes measured electrochemical reaction& 50~Hz & -- & 10~pA
+         \tabularnewline \hline
+
+      %\end{tabularx}
+      \end{tabular}
+      \begin{tablenotes}[online]
+      \item[$\propto $] data rates are based on the frequency and the accuracy in bits
+         stated in the references; they do not include time stamps or message headers.
+      \item[$\Diamond$] values taken from the references as available.
+      \item[$\Join$] for each of the 3 axis.
+      \item [$\lhd$] sensor data is collected every 10~s by collector.
+      \item [$\rhd$] our assumption of 9 bits per measure (up to 512~mg/dL (\acs{USA} glucose units)).
+      \item[$\ddag$] prototypes and clinical trials exist for devices with 16 channels.
+      \item[$\aleph$] more channels are needed (e.g. for decoding arm joint angles); 100 channels arrays are being developed.
+      \item[$\star$] tested on mice; measurement using \ac{MRI}, but test values were extracted from explanted sensors.
+      \item [$\otimes$] the developed sensor was not made of nano tubes, which according to the authors, led to poor sensitivity.
+      \end{tablenotes}
+      }
+   \end{threeparttable}
+\end{sidewaystable}
+
+
 \section{Unidades}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Deve-se usar o sistema ISO de unidades e respeitar a capitalização das unidades de acordo com a norma. Ver \emph{Quantities and units} em \href{http://www.cl.cam.ac.uk/~mgk25/publ-tips/#typography}{Typographic conventions} (podem e devem dar uma olhada nas outras partes da página).
