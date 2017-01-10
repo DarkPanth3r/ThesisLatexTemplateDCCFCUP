@@ -1,4 +1,8 @@
-\chapter{Desenvolvimento}\label{chap:dese}
+\chapter{Desenho e Desenvolvimento}\label{chap:devel}
+
+O referente ao ``Your work'' do capítulo~\ref{chap:back}.
+
+\section{Exemplo de código}
 
 \begin{lstlisting}[numbers=none,language=java,caption={[CommandDaemonCallsItf]
    {CommandDaemon} callback interfaces},label=lis:commandDCallsItfs,float=htb]
@@ -10,11 +14,16 @@ public interface CallBackCmdMeasurements { // comment
 
 É possível como referir o código, por exemplo o bloco de código~\ref{lis:commandDCallsItfs}.
 
-Outro acrónimo pode ser \ac{TCP} (que deve estar expandido aqui, apesar de ter sido usado já no capítulo \ref{chap:syst}.
+\section{Acrónimos}
 
-Podem ver a figura \ref{fig:logoFCUP} muito bem. Notem que na lista de figuras nao aparece tudo o que está na caption, mas só o que está entre [].
+Deve-se acrescentar os acrónimos no ficheiro \texttt{acros.tex} e ordená-los alfabeticamente nesse ficheiro.
+Vamos usar o acrónimo \ac{TCP} que deve estar expandido, assim como no capítulo~\ref{chap:tests}. Os acrónimos devem aparecer expandidos em cada capítulo (o que está já configurado para esta dissertação).
 
+Podem usar $\backslash$\texttt{acs} para apenas mostrar o acrónimo, $\backslash$\texttt{acl} para mostrar a expansão. Ver mais na documentação do pacote \texttt{acronym}.
 
+\section{Figuras}
+
+Podem ver a figura~\ref{fig:logoFCUP} muito bem. Notem que na lista de figuras não aparece tudo o que está na legenda, mas apenas o que está entre~[].
 
 \begin{figure}[htb]
    \centering % center the figure
@@ -23,8 +32,104 @@ Podem ver a figura \ref{fig:logoFCUP} muito bem. Notem que na lista de figuras n
 \end{figure}
 
 
-\lipsum[3-7]
-\section{Teste}
-\lipsum[1]
-E isto é o fim do cap. \ref{chap:dese}.
+\section{Referências a bibliografia}
+Algumas referências para se ver a ordenação~\cite{yaacoub2012} (estão ordenadas pelo apelido do autor). Aqui outra ainda~\cite{etsitr102732}.
+
+Temos aqui o Clausen~\cite{Clausen2003}. E para ver várias~\cite{yaacoub2012, etsitr102732, strunk2007elements}
+
+
+\section{Sugestões na escrita e uso do tex}
+\begin{itemize}
+  \item usar o \textasciitilde{} para ligar as referências, evita a possível mudança de página: ex.: como o Brandão refere\textasciitilde\textbackslash{}cite\{bran99\}
+
+\end{itemize}
+\section{Sugestões na escrita e uso do tex}
+\begin{itemize}
+  \item em inglês não usar a \emph{short form}. Em textos formais deve-se manter a \emph{long form}. Incorreto: ``don't use''. \textbf{Correto:} ``do not use''
+  \item em inglês (e também português) não usar a forma reflexiva ou indireta, preferir sempre a forma direta (que é mais assertiva e torna as frases menos complexas).
+     \begin{itemize}
+        \item incorreto:``Python was used to program''; Correto: ``we used Python''
+     \end{itemize}
+\end{itemize}
+
+\section{Tabelas}
+Exemplo de uma tabela mais complexa na tabela~\ref{tab:bsnvswsn}.
+
+\begin{table}[htbp]
+   \caption[BSN vs WSN]{BSN versus WSN
+   (with input from  Latré  and Guang )}
+\label{tab:bsnvswsn}
+\centering
+{
+\footnotesize
+\begin{tabularx}{0.98\textwidth}{|>{\columncolor{gray-cell}}c|X|X|}
+   \hline
+   \rowcolor{gray-cell} 
+   &    \centering  \textbf{BSN} &  \centering \textbf{WSN}  \tabularnewline 
+   \hline
+   %%%% line
+   \begin{sideways} \hspace{-11em} \textbf{Distribution} \end{sideways}
+   &  
+   \begin{asparaenum}[\bfseries i)]
+      \item Existence of a \ac{BS};
+      \item \ac{BS} collects, maintains and processes the data;
+      \item Nodes will do minimal processing, sending all data to the \ac{BS};
+      \item Centralized system where \ac{BS} controls all nodes;
+      \item Node replacement is difficult in in-body sensor nodes;
+      \item Smaller number of nodes;
+      \item Nodes need to take biocompatibility, wearability into account.
+   \end{asparaenum}
+   & 
+   \begin{asparaenum}[\bfseries i)]
+
+      \item A \ac{BS} may or not exist or there may be several \acp{BS} (e.g. mobile nodes 
+         collect info, clustering);
+      \item As in \ac{BSN}, but also on-demand querying;
+      \item Nodes will do processing, aggregation to alleviate communication or 
+         correlate results;
+      \item Distributed system, nodes decide cooperatively;
+         %(form clusters, aggregate data, \etc);
+      \item Node replacement is difficult due to location, scale, etc.;
+      \item (usually) Wide areas covered by large number of nodes.
+      \item Nodes may need to be environment friendly, indiscernible from surroundings.
+     %    \vspace{-0.7em}
+   \end{asparaenum}
+   \tabularnewline \hline
+   %%%% line
+   \textbf{Comm.} 
+   & 
+   \begin{asparaenum}[\bfseries i)]
+      \item One hop to \ac{BS};
+      \item Close range but attenuated by body;
+      \item Data rates heterogeneous.
+    %\vspace{-0.7em}
+   \end{asparaenum}
+   & 
+   \begin{asparaenum}[\bfseries i)]
+      \item Multi hop through network of sensor nodes;
+      \item Long(er) range;
+      \item Data rates homogeneous.
+    %\vspace{-0.7em}
+   \end{asparaenum}
+   \tabularnewline \hline
+   %%%% line
+    \textbf{Data} 
+   & 
+   This is some text on this cell. The multirow package does not know the height of the cell and can not center the cell to the right. This is because of the X from tabularx.
+   & 
+   \multirow{ 2}{*}{This is on two rows of the table}
+
+ \tabularnewline \cline{1-2}\noalign{\vskip.3pt}% using the noaling vskip to show the line
+   %%%% line
+    \textbf{Energy} 
+   & 
+   Some more text just to show something
+   %      \vspace{-0.7em}
+   & 
+    \tabularnewline \hline
+\end{tabularx}
+}
+\end{table}
+
+\section{Referências para outras fontes de informação}
 
