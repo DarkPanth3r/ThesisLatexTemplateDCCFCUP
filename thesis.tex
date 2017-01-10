@@ -86,10 +86,30 @@ pdfpagelabels=false
 \afterpreface
 
 %% main tex here
+%% By putting the chapter names here, one can just comment the content in the chapters 
+%% and produce a pdf with the correct chapter number.
+%% If you want further configurability you can use subfiles package
+%% https://www.ctan.org/pkg/subfiles
+
+%\chapter{Introdução}\label{chap:intro}
 \include{chap-intro}
+
+%\chapter{Background}\label{chap:back}
+\include{chap-background}
+
+%\chapter{Estado da Arte}\label{chap:stat}
 \include{chap-related}
-\include{chap-architecture}
-\include{chap-development} 
+
+%\chapter{Desenho da Arquitetura}\label{chap:syst}
+\include{chap-development}
+
+%\chapter{Desenvolvimento}\label{chap:dese}
+\include{chap-tests} 
+
+%\chapter{Resultados e análise}\label{chap:results}
+\include{chap-results} 
+
+%\chapter{Conclusões}\label{chap:conc}
 \include{chap-conclusion}
 
 
