@@ -72,7 +72,7 @@ my ($BASEFILE)= $FILE=~/(.*)\.$TEXEXT$/;
 my $DOBIBLIO = 0;
 
 open(FD,"$FILE") or fatal("Error opening $FILE");
-$DOBIBLIO = 1 if( grep(/^[^%]*\\bibliography{.+}/, <FD>));
+$DOBIBLIO = 1 if( grep(/^[^%]*\\bibliography\{.+\}/, <FD>));
 close(FD);
 
 log_ ("Start ($FILE): ". strftime("%Y/%m/%d-%H:%M",localtime));
