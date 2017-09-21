@@ -20,10 +20,24 @@ public interface CallBackCmdMeasurements { // comment
 \section{Acrónimos}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Deve-se acrescentar os acrónimos no ficheiro \texttt{acros.tex} e ordená-los alfabeticamente nesse ficheiro.
-Vamos usar o acrónimo \ac{TCP} que deve estar expandido, assim como no capítulo~\ref{chap:tests}. Os acrónimos devem aparecer expandidos em cada capítulo (o que está já configurado para esta dissertação).
+Deve-se acrescentar os acrónimos no ficheiro \texttt{acros.tex} e ordená-los 
+alfabeticamente nesse ficheiro.
+Vamos usar o acrónimo \ac{TCP} que deve estar expandido, assim como no 
+capítulo~\ref{chap:tests}. Os acrónimos devem aparecer expandidos em cada 
+capítulo (o que está já configurado para esta dissertação).
 
-Podem usar $\backslash$\texttt{acs} para apenas mostrar o acrónimo, $\backslash$\texttt{acl} para mostrar a expansão. Ver mais na documentação do pacote \texttt{acronym}.
+Ao usar $\backslash$\texttt{acp} o \texttt{acronym} tentará colocar o plural 
+(acrescentando um s). É possível no ficheiro \texttt{acros.tex} colocar qual o 
+plural pretendido por exemplo \acp{USF}. Deve-se usar 
+$\backslash$\texttt{newacroplural\{USF\}\{Unidades de Saúde Familiar\}}, 
+definindo o novo plural. Pode-se opcionalmente definir um novo ``plural'' para a 
+versão do acrónimo com 
+$\backslash$\texttt{newacroplural\[USFes\]\{USF\}\{Unidades de Saúde Familiar\}} 
+(acrónimo no plural incorreto; apenas para exemplo).
+
+Podem usar $\backslash$\texttt{acs} para apenas mostrar o acrónimo, 
+$\backslash$\texttt{acl} para mostrar a expansão. Ver mais na documentação do 
+pacote \texttt{acronym}.
 
 \section{Figuras}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
