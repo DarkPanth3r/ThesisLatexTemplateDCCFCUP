@@ -13,4 +13,4 @@ You should also check what is stated in [Estrutura e Layout de teses](https://si
 * You are free to clone this template and use it as you see fit.
 
 ### Tips and Tricks for the final research papers and thesis ###
-https://www.tum.de/en/studies/graduation/theses/tips-and-tricks/
+* https://www.tum.de/en/studies/graduation/theses/tips-and-tricks/
